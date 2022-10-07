@@ -22,7 +22,7 @@ npm run lint
 ```
 
 ### Generation self sigined certificate
-* via website: [https://regery.com/en/security/ssl-tools/self-signed-certificate-generator](Self signed certificate generator)
+* via website: [Self signed certificate generator](https://regery.com/en/security/ssl-tools/self-signed-certificate-generator)
 * via console (Linux/Unix (including MacOS)
 ```terminal
 $ openssl genrsa -out server.key
