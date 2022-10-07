@@ -21,6 +21,16 @@ npm run build
 npm run lint
 ```
 
+### Generation self sigined certificate
+* via website: [https://regery.com/en/security/ssl-tools/self-signed-certificate-generator](Self signed certificate generator)
+* via console (Linux/Unix (including MacOS)
+```terminal
+$ openssl genrsa -out server.key
+$ openssl req -new -key server.key -out server.csr
+$ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.pem
+```
+Next create directory `dev_keys` and move `server.pem` and `server.key`. Default certificate/key name is `cert.(key|pem)`. If you want to use your's own name, you must change `key` and `cert` parameter value in configuration file (`appsettings.*.json`) file.
+
 ### Deprecated packages
 * vuelidate-error-extractor v2.4.1 - is no longer supported by Vuejs 3.x
 
